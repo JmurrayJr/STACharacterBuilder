@@ -1,0 +1,28 @@
+{
+	"Description":"At this stage, the character is almost complete, and needs only a few final elements and adjustments. This serves as a last chance to customize the character before play, and cannot not be done randomly.",
+	"Actions":[
+			{
+				"Action":"AddValue"
+			},
+			{
+				"Description":"A character may not have any Attributes above 12, and may not have more than one Attribute at 12 (if the character has the Untapped Potential talent, from Step Five, they may not have any Attributes above 11 instead). <p /> For any Attribute which has a rating above and beyond those limits, reduce it until it is within the limit. For each point reduced on an Attribute, increase another Attribute by one, though the limits noted above must still be obeyed. <p /> Once this has been done, the character may then increase two Attributes by 1 each; again, the normal limits apply.",
+				"Action":"ChooseAttribute",
+				"Repeat":1,
+				"Options":[
+						{
+							"Attribute":"Any"
+						}
+				]
+			},
+			{
+				"Description":"A character may not have any Disciplines above 5, and may not have more than one Discipline at 5 (if the character has the Untapped Potential talent, from Step Five, they may not have any Attributes above 4 instead). For any Discipline which has a rating above and beyond those limits, reduce it until it is within the limit. For each point reduced on a Discipline, increase another Discipline by one, though the limits noted above must still be obeyed. <p /> Once this has been done, the character may then increase two Disciplines by 1 each; again, the normal limits apply.",
+				"Action":"ChooseDiscipline",
+				"Repeat":1,
+				"Options":[
+						{
+							"Discipline":"Any"
+						}
+				]
+			}
+	]
+}

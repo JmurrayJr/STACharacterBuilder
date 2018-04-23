@@ -1,0 +1,67 @@
+[
+	{
+		"id":1,
+		"Name":"Young Officer",
+		"Description":"The character is defined by their potential more than their skill. Their raw talent and their expectations of what the universe is like have not yet been tempered by reality.",
+		"Actions":[
+					{
+						"Action":"AddValue",
+						"Description":"Choose your value freely"
+					},
+					{
+						"Action":"AddTalent",
+						"Options":[
+									{
+										"id":-1,
+										"Name":"Untapped Potential",
+										"Requirements":"None",
+										"Discipline":"Career",
+										"Description":"The character is inexperienced, but talented and with a bright future in Starfleet. The character may not have or increase any Attribute above 11, or any Discipline above 4 while they have this Talent (and may have to adjust Attributes and Disciplines accordingly at the end of character creation). Whenever the character succeeds at a Task for which they bought one or more additional dice with either Momentum or Threat, they may roll 1 challenge die. The character receives bonus Momentum equal to the roll of the , and adds one point to Threat if an Effect is rolled. The character cannot gain any higher rank than lieutenant (junior grade) while they possess this Talent."
+									}
+								]
+					}
+				]
+	},
+	{
+		"id":2,
+		"Name":"Experienced Officer",
+		"Description":"The character has several years of experience in service of Starfleet, and is enjoying a promising career. This is the default assumption for characters created using these rules.",
+		"Actions":[
+					{
+						"Action":"AddValue",
+						"Description":"Choose your value freely"
+					},
+					{
+						"Action":"ChooseTalent",
+						"Options":[
+									{
+										"Talent":"Any"
+									}
+								]
+					}
+				]
+	},
+	{
+		"id":3,
+		"Name":"Veteran Officer",
+		"Description":"The character has decades of experience in the service of Starfleet, and has served on many ships, and starbases. The character’s judgement and opinions are highly-regarded by subordinates, peers, and even superiors.",
+		"Actions":[
+					{
+						"Action":"AddValue",
+						"Description":"Choose your value freely"
+					},
+					{
+						"Action":"AddTalent",
+						"Options":[
+									{
+										"id":-1,
+										"Name":"Veteran",
+										"Requirements":"None",
+										"Discipline":"Career",
+										"Description":"The character is wise and experienced, and draws upon inner reserves of willpower and determination in a more measured and considered way. Whenever the character spends a point of Determination, roll 1 challenge die. If an Effect is rolled, immediately regain that spent point of Determination. The character has a rank of at least Lieutenant Commander."
+									}
+								]
+					}
+				]
+	}
+]

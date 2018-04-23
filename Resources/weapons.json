@@ -1,0 +1,146 @@
+[
+	{
+	  "id":1,
+	  "Name": "Unarmed Strike",
+	  "Type": "Melee",
+	  "Damage": 1,
+	  "Size": "1H",
+	  "Qualities": "Knockdown, Non-lethal",
+	  "Cost": "-"
+	},
+	{
+	  "id":2,
+	  "Name": "Knife/Dagger",
+	  "Type": "Melee",
+	  "Damage": 1,
+	  "Size": "1H",
+	  "Qualities": "Vicious 1, Deadly, Hidden 1",
+	  "Cost": "Opportunity 1"
+	},
+	{
+	  "id":3,
+	  "Name": "Blade (Sword, Mek’leth, etc)",
+	  "Type": "Melee",
+	  "Damage": 2,
+	  "Size": "1H",
+	  "Qualities": "Vicious 1",
+	  "Cost": "Opportunity 1"
+	},
+	{
+	  "id":4,
+	  "Name": "Heavy Blade (Bat’leth, Kar’takin, Lirpa)",
+	  "Type": "Melee",
+	  "Damage": 3,
+	  "Size": "2H",
+	  "Qualities": "Vicious 1",
+	  "Cost": "Opportunity 1, Escalation 1"
+	},
+	{
+	  "id":5,
+	  "Name": "Bludgeon",
+	  "Type": "Melee",
+	  "Damage": 2,
+	  "Size": "1H",
+	  "Qualities": "Knockdown",
+	  "Cost": "Opportunity 1"
+	},
+	{
+	  "id":6,
+	  "Name": "Phaser Type-1",
+	  "Type": "Ranged",
+	  "Damage": 2,
+	  "Size": "1H",
+	  "Qualities": "Charge, Hidden 1",
+	  "Cost": "Standard Issue"
+	},
+	{
+	  "id":7,
+	  "Name": "Phaser Type-2",
+	  "Type": "Ranged",
+	  "Damage": 3,
+	  "Size": "1H",
+	  "Qualities": "Charge",
+	  "Cost": "Standard Issue"
+	},
+	{
+	  "id":8,
+	  "Name": "Phaser Type-3 (Phaser Rifle)",
+	  "Type": "Ranged",
+	  "Damage": 4,
+	  "Size": "2H",
+	  "Qualities": "Accurate, Charge",
+	  "Cost": "Opportunity 1, Escalation 2"
+	},
+	{
+	  "id":9,
+	  "Name": "Pulse Grenade",
+	  "Type": "Ranged",
+	  "Damage": 4,
+	  "Size": "1H",
+	  "Qualities": "Area, Charge, Grenade",
+	  "Cost": "Opportunity 1, Escalation 2"
+	},
+	{
+	  "id":10,
+	  "Name": "Andorian Plasma Rifle",
+	  "Type": "Ranged",
+	  "Damage": 4,
+	  "Size": "2H",
+	  "Qualities": "Intense, Accurate, Deadly",
+	  "Cost": "Not Available"
+	},
+	{
+	  "id":11,
+	  "Name": "Phase Pistol",
+	  "Type": "Ranged",
+	  "Damage": 3,
+	  "Size": "1H",
+	  "Qualities": "",
+	  "Cost": "Standard Issue"
+	},
+	{
+	  "id":12,
+	  "Name": "Particle Rifle",
+	  "Type": "Ranged",
+	  "Damage": 4,
+	  "Size": "2H",
+	  "Qualities": "Accurate Standard Issue",
+	  "Cost": "Standard Issue"
+	},
+	{
+	  "id":13,
+	  "Name": "Disruptor Pistol",
+	  "Type": "Ranged",
+	  "Damage": 3,
+	  "Size": "1H",
+	  "Qualities": "Vicious 1",
+	  "Cost": "Not Available"
+	},
+	{
+	  "id":14,
+	  "Name": "Disruptor Rifle",
+	  "Type": "Ranged",
+	  "Damage": 4,
+	  "Size": "2H",
+	  "Qualities": "Vicious 1, Accurate ",
+	  "Cost": "Not Available"
+	},
+	{
+	  "id":15,
+	  "Name": "Jem’Hadar Plasma Pistol",
+	  "Type": "Ranged",
+	  "Damage": 3,
+	  "Size": "1H",
+	  "Qualities": "Vicious 1, Debilitating",
+	  "Cost": "Not Available"
+	},
+	{
+	  "id":16,
+	  "Name": "Jem’Hadar Plasma Rifle",
+	  "Type": "Ranged",
+	  "Damage": 4,
+	  "Size": "2H",
+	  "Qualities": "Vicious 1, Accurate, Debilitating",
+	  "Cost": "Not Available"
+	}
+]

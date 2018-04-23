@@ -1,0 +1,551 @@
+[
+	{
+		"id":1,
+		"Name":"Ship Destroyed",
+		"Description":"The ship the character was serving on was lost, destroyed during a mission, and the character was one of the few who survived.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Daring"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Security"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect the character’s experiences. Examples include: Extra Vehicular Operations, Small Craft, or Survival."
+					}
+				]
+	},
+	{
+		"id":2,
+		"Name":"Death of a friend",
+		"Description":"During an important mission, one of the character’s friends was killed in action.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Insight"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Medicine"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect the character’s experiences. Examples include: Counselling, but it may also represent a skill or pursuit the character takes up in their fallen friend’s memory or to prevent the same thing happening in the future."
+					}
+				]
+	},
+	{
+		"id":3,
+		"Name":"Lauded by another culture",
+		"Description":"The character was involved in a mission that earned the official praise of a non-Federation culture; they are now considered to be a friend to that people.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Presence"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Science"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect the character’s experience with that culture. A Focus of X Culture, replacing the X with the name of that culture, is a good example, as would any that represent skills or techniques specific to that culture."
+					},
+					{
+						"Action":"ChooseTrait",
+						"Description": "The character may gain a Trait, which should reflect this event. A good example might be Friend to the X, replacing the X with the name of the culture. This reflects the character’s renown amongst that culture, and the benefits and problems such status brings.",
+						"Options":[
+									{
+										"Trait":"Any"
+									}
+								]
+					}
+				]
+	},
+	{
+		"id":4,
+		"Name":"Negotiate a Treaty",
+		"Description":"The character was part of a delegation that helped negotiate a treaty, agreement, or alliance with a culture outside the Federation.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Control"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Command"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect the character’s experience with the negotiations. Examples include: Diplomacy, Negotiation, or Galactic Politics."
+					}
+				]
+	},
+	{
+		"id":5,
+		"Name":"Required to take Command",
+		"Description":"During a mission, a crisis left the mission’s leader unable to lead. This required the character to take command, something they may not have been prepared for.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Daring"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Command"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect the character’s experiences during the crisis. Examples include: Lead by Example, Inspiration, or Composure."
+					}
+				]
+	},
+	{
+		"id":6,
+		"Name":"Encountered a truly Alien Being",
+		"Description":"The character encountered a life-form which is truly alien, something barely within the comprehension of humanoid life. It might have been some godlike entity, or a creature that swims through space, but whatever it was, it was not life as we know it.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Reason"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Science"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect the character’s experiences with the entity. Examples include: Empathy, Philosophy, Xenobiology"
+					}
+				]
+	},
+	{
+		"id":7,
+		"Name":"Serious Injury",
+		"Description":"The character was seriously hurt, and needed to spend a considerable amount of time recovering.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Fitness"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Medicine"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character may gain a Trait, which should reflect some lasting effect of the character’s injury or the way they recovered. Examples include: Prosthetic Implant, or some form of disability."
+					}
+				]
+	},
+	{
+		"id":8,
+		"Name":"Conflict with a hostile culture",
+		"Description":"The character was involved in a major battle with a hostile force, and is unlikely to forget the experience.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Fitness"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Security"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect skills they honed during the fighting. Examples include: Hand Phasers, Hand-to-Hand Combat, or Shipboard Tactical Systems."
+					}
+				]
+	},
+	{
+		"id":9,
+		"Name":"Mentored",
+		"Description":"A highly-respected officer took notice of the character’s career. For a time, the character served as the officer’s pilot and aide, gaining the benefit of the officer’s experiences and lessons.",
+		"Actions":[
+					{
+						"Action":"ChooseAttribute",
+						"Options":[
+									{
+										"Attribute":"Any"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Conn"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the lessons learned. Examples include: Composure or Etiquette, though any Focus reflecting the officer’s specialities would be fitting."
+					}
+				]
+	},
+	{
+		"id":10,
+		"Name":"Transporter Accident",
+		"Description":"The character suffered some manner of strange accident while using a Transporter.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Control"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Conn"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect something they learned either because of the accident, or in the aftermath. Examples include: Transporters & Replicators, Small Craft, or Quantum Mechanics."
+					}
+				]
+	},
+	{
+		"id":11,
+		"Name":"Dealing with a plague",
+		"Description":"The character’s starship was assigned to provide aid to a world deal with an epidemic.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Insight"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Medicine"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, which should reflect how they helped during the crisis. Examples include: Infectious Diseases, Emergency Medicine, or Triage."
+					}
+				]
+	},
+	{
+		"id":12,
+		"Name":"Betrayed Ideals for a Superior",
+		"Description":"The character was placed in a situation where they had to choose between a trusted superior and their own ideals, and chose to follow the superior.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Presence"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Command"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the event and its aftermath. Examples include: Persuasion, Inspiration, Investigation."
+					}
+				]
+	},
+	{
+		"id":13,
+		"Name":"Called out a Superior",
+		"Description":"The character was placed in a situation where they had to choose between a trusted superior and their own ideals, and chose to follow their ideals.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Reason"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Conn"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the event and its aftermath. Examples include: Uniform Code of Justice, History, or Starfleet Protocol."
+					}
+				]
+	},
+	{
+		"id":14,
+		"Name":"New Battle Strategy",
+		"Description":"In combat with a hostile force, the character devised a new strategy or tactic.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Daring"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Security"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting their decisive battlefield leadership. Examples include: Combat Tactics, Hazard Awareness, or Lead by Example."
+					}
+				]
+	},
+	{
+		"id":15,
+		"Name":"Learns Unique Language",
+		"Description":"The character encounters a species with an unusual form of communication, and learns to communicate with them.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Insight"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Science"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting what the character learned from the event. Examples include: Linguistics, Cultural Studies, or Negotiations."
+					}
+				]
+	},
+	{
+		"id":16,
+		"Name":"Learns Unique Language",
+		"Description":"The character encounters a species with an unusual form of communication, and learns to communicate with them.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Reason"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Engineering"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the event and its aftermath. Examples include: Ancient Technology, Computers, Reverse Engineering."
+					}
+				]
+	},
+	{
+		"id":17,
+		"Name":"Special Commendation",
+		"Description":"The character encounters a species with an unusual form of communication, and learns to communicate with them.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Fitness"
+									}
+								]
+					},
+					{
+						"Action":"ChooseDiscipline",
+						"Options":[
+									{
+										"Discipline":"Any"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the event and its aftermath. Examples include: Athletics, Survival, or Emergency Medicine."
+					}
+				]
+	},
+	{
+		"id":18,
+		"Name":"Solved an Enginnering Crisis",
+		"Description":"The character was instrumental in ending a crisis caused by malfunctioning technology, and saved many lives in the process.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Control"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Engineering"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the technology involved in the event. Examples include: Electro-Plasma Power Systems, Fusion Reactors, or Warp Engines."
+					}
+				]
+	},
+	{
+		"id":19,
+		"Name":"Breakthrough or Invention",
+		"Description":"The character made an important technological discovery, devised a new way of using a particular technology, or invented some new technology that will be invaluable in the future.",
+		"Actions":[
+					{
+						"Action":"ChooseAttribute",
+						"Options":[
+									{
+										"Attribute":"Any"
+									}
+								]
+					},
+					{
+						"Action":"AddDiscipline",
+						"Options":[
+									{
+										"Discipline":"Engineering"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the character’s achievement. Examples include: Experimental Technology, Invention, or Improvisation."
+					}
+				]
+	},
+	{
+		"id":20,
+		"Name":"First Contact",
+		"Description":"The character was chosen to be involved in one of the most important of Starfleet’s missions: first contact with another culture.",
+		"Actions":[
+					{
+						"Action":"AddAttribute",
+						"Options":[
+									{
+										"Attribute":"Presence"
+									}
+								]
+					},
+					{
+						"Action":"ChooseDiscipline",
+						"Options":[
+									{
+										"Discipline":"Any"
+									}
+								]
+					},
+					{
+						"Action":"AddFocus",
+						"Description": "The character gains a Focus, reflecting the character’s achievement. Examples include: Experimental Technology, Invention, or Improvisation."
+					}
+				]
+	}
+]
