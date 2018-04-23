@@ -1,0 +1,767 @@
+<div id="NewCharacterDialog" title="New Character Form">
+	<div id="NewCharacterAccordion">
+		<h3 id="Species">Step 1: Choose your Species</h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-12 center">
+					<select id="CharacterCreationSpeciesSelect" class="formSelectInput speciesSelect nudge">
+					</select>
+				</div>
+				<div id="CharacterCreationSpeciesInfo" class="characterCreationForm col-xs-12">
+					<div class="row">
+						<div class="col-xs-2 col-md-2 col-md-2">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div class="row">
+								<div class="col-xs-12">
+									<img id="CharacterCreationSpeciesImage" class="monoChromeInvert">
+									</img>
+									<span id="CharacterCreationSpeciesDescription">
+
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-1 col-md-2">
+							<label class="formTextLabel">
+							Era:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<span id="CharacterCreationSpeciesEra">
+								All
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Attributes:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationSpeciesAttributes">
+
+							</div>
+						</div>
+					</div>
+					<div  class="row">
+						<div class="col-xs-1 col-md-2">
+							<label class="formTextLabel">
+								Traits:
+							</label>
+						</div>
+						<div id="CharacterCreationSpeciesTraits" class="col-xs-12 col-md-10">
+							<span >
+								This trait may reduce the Difficulty of Tasks to resist extreme cold, or Tasks impacted by extremely low temperatures. Their antennae aid in balance and spatial awareness; a lost antenna can be debilitating until it regrows. Andorians also have a high metabolism, meaning, amongst other things, that they tire more quickly than Humans; this also makes them more vulnerable to infection from certain types of injury. Before the Federation, Andorians and Vulcans had numerous disputes; though these issues are largely considered to be ancient history, Andorians and Vulcans don’t always get along.
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-xs-2">
+							<label class="formTextLabel">
+								Talents:
+							</label>
+						</div>
+						<div id="CharacterCreationSpeciesTalents" class="col-xs-12 col-md-10">
+							<span>
+								Select a Talent
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="Environment">Step 2: Choose your Environment</h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-12">
+					<select id="CharacterCreationEnvironmentSelect" class="formSelectInput environmentSelect nudge">
+					</select>
+					<select id="CharacterCreationEnvironmentOtherSpeciesSelect" class="formSelectInput speciesSelect nudge">
+					</select>
+				</div>
+				<div id="CharacterCreationEnvironmentInfo" class="characterCreationForm col-xs-12">
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<span id="CharacterCreationEnvironmentDescription">
+								Default Environment Description Here
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-3">
+							<label class="formTextLabel">
+								Value:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<div id="CharacterCreationEnvironmentValue" >
+								<input id="CharacterCreationEnvironmentValueInput1" type="textbox" class="chosenValue newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Attributes:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<div id="CharacterCreationEnvironmentAttributes">
+
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Disciplines:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<div id="CharacterCreationEnvironmentDisciplines">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="Upbringing">Step 3: Choose your Upbringing</h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-12">
+					<select id="CharacterCreationUpbringingSelect" class="formSelectInput upbringingSelect nudge">
+					</select>
+				</div>
+				<div id="CharacterCreationUpbringingInfo" class="characterCreationForm col-xs-12">
+					<div class="row">
+						<div class="col-xs-3 col-sm-2 col-md-3">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<span id="CharacterCreationUpbringingDescription">
+
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Accept/Reject:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<span id="CharacterCreationUpbringingChoice">
+
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Focus:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<div id="CharacterCreationUpbringingFocus">
+								<input id="CharacterCreationUpbringingFocusInput1" type="textbox" class="chosenFocus newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Discipline:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-9">
+							<div id="CharacterCreationUpbringingDisciplines">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<label class="formTextLabel">
+								Talents:
+							</label>
+						</div>
+						<div id="CharacterCreationUpbringingTalents" class="col-xs-12 col-md-9">
+							<span>
+								Select a Talent
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="Starfleet">Step 4: Character's Time at Starfleet</h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-12">
+					<select id="CharacterCreationStarfleetTrackSelect" class="formSelectInput starfleetTrackSelect nudge">
+					</select>
+				</div>
+				<div id="CharacterCreationStarfleetTrackInfo" class="characterCreationForm col-xs-12">
+					<div class="row">
+						<div class="col-xs-3 col-md-2">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<span id="CharacterCreationStarfleetTrackDescription">
+								Default StarfleetTrack Description Here
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Value:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackValue" >
+								<input id="CharacterCreationStarfleetTrackValueInput1" type="textbox" class="chosenValue newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Focus:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackFocus">
+								<input id="CharacterCreationStarfleetTrackFocusInput1" type="textbox" class="chosenFocus newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Focus:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackFocus">
+								<input id="CharacterCreationStarfleetTrackFocusInput2" type="textbox" class="chosenFocus newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Focus:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackFocus">
+								<input id="CharacterCreationStarfleetTrackFocusInput3" type="textbox" class="chosenFocus newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Attributes:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackAttributes">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Disciplines:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackDisciplines">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Talents:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationStarfleetTrackTalents">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="Career">Step 5: Career</h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-12">
+					<select id="CharacterCreationCareerSelect" class="formSelectInput careerSelect nudge">
+					</select>
+				</div>
+				<div id="CharacterCreationCareerInfo" class="characterCreationForm col-xs-12">
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<span id="CharacterCreationCareerDescription">
+								Default Career Description Here
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Value:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationCareerValue">
+								<input id="CharacterCreationCareerValueInput1" type="textbox" class="chosenValue newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2 col-md-2">
+							<label class="formTextLabel">
+								Talents:
+							</label>
+						</div>
+						<div class="col-xs-12 col-md-10">
+							<div id="CharacterCreationCareerTalents">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="CareerEvents">Step 6: Career Events </h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4>
+						Career Event 1
+					</h4>
+					<select id="CharacterCreationCareerEventsSelect1" class="formSelectInput careerEventsSelect nudge">
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div id="CharacterCreationCareerEvent1Info" class="characterCreationForm col-xs-">
+					<div class="row">
+						<div class="col-xs-2">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-10">
+							<span id="CharacterCreationCareerEvent1Description">
+								Default Career Event 1 Description Here
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-lg-2">
+							<label class="formTextLabel">
+								Attributes:
+							</label>
+						</div>
+						<div class="col-xs-9 col-lg-10">
+							<div id="CharacterCreationCareerEvent1Attributes">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-lg-2">
+							<label class="formTextLabel">
+								Discipline:
+							</label>
+						</div>
+						<div class="ccol-xs-9 col-lg-10">
+							<div id="CharacterCreationCareerEvent1Disciplines">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2">
+							<label class="formTextLabel">
+								Focus:
+							</label>
+						</div>
+						<div class="col-xs-10">
+							<div id="CharacterCreationCareerEvent1Focus">
+								<input id="CharacterCreationCareerEvent1FocusInput1" type="textbox" class="chosenFocus newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4>
+						Career Event 2
+					</h4>
+					<select id="CharacterCreationCareerEventsSelect2" class="formSelectInput careerEventsSelect nudge">
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div id="CharacterCreationCareerEvent2Info" class="characterCreationForm col-xs-12">
+					<div class="row">
+						<div class="col-xs-2">
+							<label class="formTextLabel">
+								Description:
+							</label>
+						</div>
+						<div class="col-xs-10">
+							<span id="CharacterCreationCareerEvent2Description">
+								Default Career Event 1 Description Here
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-lg-2">
+							<label class="formTextLabel">
+								Attributes:
+							</label>
+						</div>
+						<div class="col-xs-9 col-lg-10">
+							<div id="CharacterCreationCareerEvent2Attributes">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-3 col-lg-2">
+							<label class="formTextLabel">
+								Discipline:
+							</label>
+						</div>
+						<div class="ol-xs-9 col-lg-10">
+							<div id="CharacterCreationCareerEvent2Disciplines">
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-2">
+							<label class="formTextLabel">
+								Focus:
+							</label>
+						</div>
+						<div class="col-xs-10">
+							<div id="CharacterCreationCareerEvent2Focus">
+								<input id="CharacterCreationCareerEvent2FocusInput1" type="textbox" class="chosenFocus newCharacterFormTextInput"></input>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="FinishingTouches">Step 7: Finishing Touches </h3>
+		<div>
+			<div class="row">
+				<div class="col-xs-2">
+					<label class="formTextLabel">
+						Description:
+					</label>
+				</div>
+				<div class="col-xs-10">
+					<div id="CharacterCreationFinishingTouchesDescription" class="description" >
+						Player will choose a single value, 2 attributes and 2 disciplines to increase by 1. This is not to be selected at random.
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2 col-md-2">
+					<label class="formTextLabel">
+						Value:
+					</label>
+				</div>
+				<div class="col-xs-12 col-md-10">
+					<div id="CharacterCreationFinishingTouchesValue">
+						<input id="CharacterCreationFinishingTouchesValueInput1" type="textbox" class="chosenValue newCharacterFormTextInput"></input>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2">
+					<label class="formTextLabel">
+						Attributes:
+					</label>
+				</div>
+				<div class="col-xs-10">
+					<div id="CharacterCreationFinishingTouchesAttributes">
+						
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-2">
+					<label class="formTextLabel">
+						Disciplines:
+					</label>
+				</div>
+				<div class="col-xs-10">
+					<div id="CharacterCreationFinishingTouchesDisciplines">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3 id="AdjustmentsHeader">Step 8: Adjustments</h3>
+		<div id="Adjustments">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
+					<p id="AttributeSlidersHeader" class="ui-state-default ui-corner-all" style="padding:4px;margin-top:10px;">
+					<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+					Attributes
+					</p>
+				</div>
+				<div id="AttributesEqualizer" class="row">
+					<div class="col-xs-2">
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="ControlSlider" class="attributeSlider" data-attr="Control" value="7"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="ControlTotalValue" data-attr="Control" class="attributeFinalValue">7</div>
+							</div>
+							<div class="col-xs-12">
+								Control
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="FitnessSlider" class="attributeSlider" data-attr="Fitness" value="7"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="FitnessTotalValue" data-attr="Fitness" class="attributeFinalValue">7</div>
+							</div>
+							<div class="col-xs-12">
+								Fitness
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2">									
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="PresenceSlider" class="attributeSlider" data-attr="Presence" value="7"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="PresenceTotalValue" data-attr="Presence" class="attributeFinalValue">7</div>
+							</div>
+							<div class="col-xs-12">
+								Presence
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-2">		
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="DaringSlider" class="attributeSlider" data-attr="Daring" value="7"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="DaringTotalValue" data-attr="Daring" class="attributeFinalValue">7</div>
+							</div>
+							<div class="col-xs-12">
+								Daring
+							</div>
+						</div>								
+					</div>
+					<div class="col-xs-2">
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="InsightSlider" class="attributeSlider" data-attr="Insight" value="7"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="InsightTotalValue" data-attr="Insight" class="attributeFinalValue">7</div>
+							</div>
+							<div class="col-xs-12">
+								Insight
+							</div>
+						</div>										
+					</div>
+					<div class="col-xs-2">
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="ReasonSlider" class="attributeSlider" data-attr="Reason" value="7"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="ReasonTotalValue" data-attr="Reason" class="attributeFinalValue">7</div>
+							</div>
+							<div class="col-xs-12">
+								Reason
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="row">
+					<p id="DisciplineSlidersHeader" class="ui-state-default ui-corner-all" style="padding:4px;margin-top:10px;">
+					<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+						Discipline
+					</p>
+				</div>
+				<div id="DisciplinesEqualizer" class="row">
+					<div class="col-xs-2">
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="CommandSlider" class="disciplineSlider" data-disc="Command" value="1"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="CommandTotalValue" data-disc="Command" class="disciplineFinalValue">1</div>
+							</div>
+							<div class="col-xs-12">
+								Command
+							</div>
+						</div>		
+					</div>
+					<div class="col-xs-2">	
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="SecuritySlider" class="disciplineSlider" data-disc="Security" value="1"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="SecurityTotalValue" data-disc="Security" class="disciplineFinalValue">1</div>
+							</div>
+							<div class="col-xs-12">
+								Security
+							</div>
+						</div>									
+					</div>
+					<div class="col-xs-2 sliderContainer">		
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="ScienceSlider" class="disciplineSlider" data-disc="Science" value="1"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="ScienceTotalValue" data-disc="Science" class="disciplineFinalValue">1</div>
+							</div>
+							<div class="col-xs-12">
+								Science
+							</div>
+						</div>		
+					</div>
+					<div class="col-xs-2 sliderContainer">	
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="ConnSlider" class="disciplineSlider" data-disc="Conn" value="1"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="ConnTotalValue" data-disc="Conn" class="disciplineFinalValue">1</div>
+							</div>
+							<div class="col-xs-12">
+								Conn
+							</div>
+						</div>										
+					</div>
+					<div class="col-xs-2 sliderContainer">	
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="EngineeringSlider" class="disciplineSlider" data-disc="Engineering" value="1"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="EngineeringTotalValue" data-disc="Engineering" class="disciplineFinalValue">1</div>
+							</div>
+							<div class="col-xs-12">
+								Engineering
+							</div>
+						</div>	
+					</div>
+					<div class="col-xs-2 sliderContainer">		
+						<div class="row">
+							<div class="col-xs-4 sliderContainer">
+								<div id="MedicineSlider" class="disciplineSlider" data-disc="Medicine" value="1"></div>
+							</div>
+							<div class="col-xs-8 valueContainer">
+								<div id="MedicineTotalValue" data-disc="Medicine" class="disciplineFinalValue">1</div>
+							</div>
+							<div class="col-xs-12">
+								Medicine
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="row">
+					<p id="FocusAdjustHeader" class="ui-state-default ui-corner-all" style="padding:4px;margin-top:10px;">
+					<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+						Focus
+					</p>
+					<div class="col-xs-12">
+						 <div id="FocusAdjustContainer" class="row">
+						 
+						 </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="row">
+					<p id="ValueValueHeader" class="ui-state-default ui-corner-all" style="padding:4px;margin-top:10px;">
+					<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+						Values
+					</p>
+					<div class="col-xs-12">
+						<div id="ValueAdjustContainer" class="row">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="row">
+					<p id="TalentValueHeader" class="ui-state-default ui-corner-all" style="padding:4px;margin-top:10px;">
+					<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+						Talents
+					</p>
+					<div class="col-xs-12">
+						<div id="TalentAdjustContainer" class="row">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input id="ResetAdjustmentsButton" type="button" value="Reset Adjustments"/>
+				<input id="FinalizeButton" type="button" value="Complete"/>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>

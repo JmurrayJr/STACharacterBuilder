@@ -1,0 +1,562 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<script id="compiler" type="text/javascript" data-build="true">
+		
+			console.log('Build is set to ' + document.getElementById('compiler').dataset.build);
+			
+			if(document.getElementById('compiler').dataset.build == 'true'){
+			
+				window.onload = function(){
+				
+					var files = [
+									{
+										"name":"jquery-3.3.1.min.js",
+										"destination":"jQueryPlaceholder"
+									},
+									{
+										"name":"bootstrap-3.3.7.js",
+										"destination":"bootstrapPlaceholder"
+									},
+									{
+										"name":"jquery-ui.min.js",
+										"destination":"jQueryUIPlaceholder"
+									},
+									{
+										"name":"bootstrap-3.3.7.css",
+										"destination":"bootstrapStylePlaceHolder"
+									},
+									{
+										"name":"jquery-ui-1.12.1.css",
+										"destination":"jQueryUIStylePlaceHolder"
+									},
+									{
+										"name":"CharacterBuilderTemplate.htm",
+										"destination":"CharacterBuilderTemplate"
+									},
+									{
+										"name":"OptionsMenuTemplate.htm",
+										"destination":"OptionsMenuTemplate"
+									},
+									{
+										"name":"STA_CharacterBuilder.css",
+										"destination":"CharacterBuilderStylePlaceHolder"
+									},
+									{
+										"name":"STA_CharacterBuilder.js",
+										"destination":"CharacterBuilderPlaceHolder"
+									}
+								]
+				
+					for(var pos in files){
+
+						var file = files[pos];		
+						var xhr = new XMLHttpRequest();
+						xhr.open('GET', file.name ,false); //Not killing myself making this one time compile async as these must be run in order
+						xhr.send();
+						
+						console.log('Loading ' + file.name);
+						
+						if (xhr.status == 200) {
+						
+							switch(file.name.split('.')[file.name.split('.').length-1]){
+							
+								case 'js':
+									var scriptElement = document.createElement('script');
+									scriptElement.id = file.destination;
+									scriptElement.type = 'text/javascript';
+									scriptElement.innerHTML = xhr.response;
+									document.head.appendChild(scriptElement);
+								break;
+								case 'css':
+									var styleElement = document.createElement('style');
+									styleElement.id = file.destination;
+									styleElement.innerHTML = xhr.response;
+									document.head.appendChild(styleElement);
+								break;
+								case 'htm':
+									var scriptElement = document.createElement('script');
+									scriptElement.id = file.destination;
+									scriptElement.type = 'text/html';
+									scriptElement.innerHTML = xhr.response;
+									document.head.appendChild(scriptElement);
+								break;
+								default:
+									console.log('No Method for handling extension');
+								break;
+							}
+						
+						}
+						else {
+							console.log('Request failed. ' +file.Name+ ' Returned status of ' + xhr.status);
+						}
+						
+					}
+					
+										
+					
+					document.getElementById('compiler').dataset.build = "false";
+				}	
+			}
+			
+	</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="MainForm" class="row">
+				<div class="col-xs-12">
+					<div class="row">
+						<div class="col-xs-2">
+							<div class="lcarsUpperLeft">
+								<div class="device-xs visible-xs">xs</div>
+								<div class="device-sm visible-sm">sm</div>
+								<div class="device-md visible-md">md</div>
+								<div class="device-lg visible-lg">lg</div>
+							</div>
+						</div>
+						<div class="col-xs-10 upperFormOverlap">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<div id="ConfigIconContainer">
+										<div class="gearIcon" title="Settings"></div>
+									</div>
+									<div id="ArcMileStoneContainer" title="Arc Mile Stones">
+										<div class="arcMileStone" >
+										</div>
+										<div id="AddArcMileStone">
+										</div>
+									</div>
+									<div id="SpotLightMileStoneContainer">
+										<div class="spotLightMileStone" title="SpotLight Mile Stones">
+										</div>
+										<div id="AddSpotLightMileStone" title="Add SpotLight...">
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 titleAndConfig">
+									<h3>STARFLEET PERSONNEL FILE</h3>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Name:
+									</label>
+								</div>
+								<div class="col-xs-4">
+									<input type="text" class="formTextInput"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Player:
+									</label>
+								</div>
+								<div class="col-xs-4">
+									<input type="text" class="formTextInput"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Species:
+									</label>
+								</div>
+								<div class="col-xs-4">
+									<select id="MainFormSpeciesSelect" class="formSelectInput speciesSelect" >
+
+									</select>
+									<input type="text" class="formTextInput hidden"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Rank:
+									</label>
+								</div>
+								<div class="col-xs-4">
+									<input type="text" class="formTextInput"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Environment:
+									</label>
+								</div>
+								<div class="col-xs-4">
+									<select id="MainFormEnvironmentSelect"  class="formSelectInput environmentSelect" >
+
+									</select>
+									<input type="text" class="formTextInput hidden"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Upbringing:
+									</label>
+								</div>
+								<div class="col-xs-4">
+									<select id="MainFormUpbringingSelect" class="formSelectInput upbringingSelect" >
+
+									</select>
+									<input type="text" class="formTextInput hidden"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Assignment:
+									</label>
+								</div>
+								<div class="col-xs-10">
+									<input type="text" class="formTextInput"></input>
+								</div>
+								<div class="col-xs-2">
+									<label class="formTextLabel">
+										Traits:
+									</label>
+								</div>
+								<div class="col-xs-10">
+									<input type="text" class="formTextInput"></input>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 ">
+					<div class="row">
+						<div class="col-xs-2">
+							<div class="lcarsUpperLeft2">
+
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="lcarsUpperLeft3">
+
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="lcarsUpperLeft4">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 verticalDivider">
+				</div>
+				<div class="col-xs-12 ">
+					<div class="row">
+						<div class="col-xs-2">
+							<div class="lcarsMiddleLeft2">
+
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="lcarsMiddleLeft3">
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="lcarsMiddleLeft4">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 ">
+					<div class="row">
+						<div class="col-xs-2">
+							<div class="lcarsMiddleLeft">
+							</div>
+							<div class="lcarsLowerLeft">
+							</div>
+							<div class="lcarsLowerLeft2">
+							</div>
+						</div>
+						<div class="col-xs-10 middleFormOverlap">
+							<div class="row">
+								<div class="col-xs-12 col-md-6">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Attributes
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-4 attributeDiv">
+											<label class="attributeLabel">
+												Control
+											</label>
+											<input id="ControlValue" type="Text" class="attributeValue" maxLength="2" value="7" data-previous="7" data-attr="Control" >
+										</div>
+										<div class="col-xs-4 attributeDiv">
+											<label class="attributeLabel">
+												Fitness
+											</label>
+											<input id="FitnessValue" type="Text" class="attributeValue" maxLength="2" value="7" data-previous="7" data-attr="Fitness" >
+										</div>
+										<div class="col-xs-4 attributeDiv">
+											<label class="attributeLabel">
+												Presence
+											</label>
+											<input id="PresenceValue" type="Text" class="attributeValue" maxLength="2" value="7" data-previous="7" data-attr="Presence" >
+										</div>
+										<div class="col-xs-4 attributeDiv">
+											<label class="attributeLabel">
+												Daring
+											</label>
+											<input id="DaringValue" type="Text" class="attributeValue" maxLength="2" value="7" data-previous="7" data-attr="Daring" >
+										</div>
+										<div class="col-xs-4 attributeDiv">
+											<label class="attributeLabel">
+												Insight
+											</label>
+											<input id="InsightValue" type="Text" class="attributeValue" maxLength="2" value="7" data-previous="7" data-attr="Insight" >
+										</div>
+										<div class="col-xs-4 attributeDiv">
+											<label class="attributeLabel">
+												Reason
+											</label>
+											<input id="ReasonValue" type="Text" class="attributeValue" maxLength="2" value="7" data-previous="7" data-attr="Reason" >
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Disciplines
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-4 disciplineDiv">
+											<label class="disciplineLabel">
+												Command
+											</label>
+											<input id="CommandValue" type="Text" class="disciplineValue" maxLength="2" value="1"  data-previous="1" data-attr="Command" >
+										</div>
+										<div class="col-xs-4 disciplineDiv">
+											<label class="disciplineLabel">
+												Security
+											</label>
+											<input id="SecurityValue" type="Text" class="disciplineValue" maxLength="2" value="1" data-previous="1" data-attr="Security" >
+										</div>
+										<div class="col-xs-4 disciplineDiv">
+											<label class="disciplineLabel">
+												Science
+											</label>
+											<input id="ScienceValue" type="Text" class="disciplineValue" maxLength="2" value="1" data-previous="1" data-attr="Science" >
+										</div>
+										<div class="col-xs-4 disciplineDiv">
+											<label class="disciplineLabel">
+												Conn
+											</label>
+											<input id="ConnValue" type="Text" class="disciplineValue" maxLength="2" value="1" data-previous="1" data-attr="Conn" >
+										</div>
+										<div class="col-xs-4 disciplineDiv">
+											<label class="disciplineLabel">
+												Engineering
+											</label>
+											<input id="EngineeringValue" type="Text" class="disciplineValue" maxLength="2" value="1" data-previous="1" data-attr="Engineering" >
+										</div>
+										<div class="col-xs-4 disciplineDiv">
+											<label class="disciplineLabel">
+												Medicine
+											</label>
+											<input id="MedicineValue" type="Text" class="disciplineValue" maxLength="2" value="1" data-previous="1" data-attr="Medicine" >
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Values
+												</div>
+											</div>
+										</div>
+										<div class="valueDiv">
+											<input id="Value0" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="valueDiv">
+											<input id="Value1" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="valueDiv">
+											<input id="Value2" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="valueDiv">
+											<input id="Value3" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="col-xs-12 determinationDiv">
+											<h3 class="determinationHeader">DETERMINATION</h3>
+											<input class="determinationCheckBox" type="checkbox"></input>
+											<input class="determinationCheckBox" type="checkbox"></input>
+											<input class="determinationCheckBox" type="checkbox"></input>
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Talents
+												</div>
+											</div>
+										</div>
+										<div class="talentDiv">
+											<input id="Talent0" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="talentDiv">
+											<input id="Talent1" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="talentDiv">
+											<input id="Talent2" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="talentDiv">
+											<input id="Talent3" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Weapons
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="row">
+												<div class="col-xs-12 weaponDiv">
+													<label class="weaponLabel">
+														Name/Type
+													</label>
+													<input type="text" class="weaponTextInput"> </input>
+													<label class="weaponLabel">A</label>
+													<input type="text" class="weaponValue weaponTextInput"> </input>
+												</div>
+												<div class="col-xs-12 weaponDiv">
+													<label class="weaponLabel">
+														Qualities
+													</label>
+													<input type="text" class="weaponTextInput"> </input>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-md-6">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Focuses
+												</div>
+											</div>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus0" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus1" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus2" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus3" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus4" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus5" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus6" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus7" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus8" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="focusDiv">
+											<input id="Focus9" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Stress
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="row stressContainer">
+												<div class="col-xs-1"><input id="stress1" type="checkbox" class="stressCheckBox" data-value="1"></input></div>
+												<div class="col-xs-1"><input id="stress2" type="checkbox" class="stressCheckBox" data-value="2"></input></div>
+												<div class="col-xs-1"><input id="stress3" type="checkbox" class="stressCheckBox" data-value="3"></input></div>
+												<div class="col-xs-1"><input id="stress4" type="checkbox" class="stressCheckBox" data-value="4"></input></div>
+												<div class="col-xs-1"><input id="stress5" type="checkbox" class="stressCheckBox" data-value="5"></input></div>
+												<div class="col-xs-1"><input id="stress6" type="checkbox" class="stressCheckBox" data-value="6"></input></div>
+												<div class="col-xs-1"><input id="stress7" type="checkbox" class="stressCheckBox" data-value="7"></input></div>
+												<div class="col-xs-1"><input id="stress8" type="checkbox" class="stressCheckBox" data-value="8"></input></div>
+												<div class="col-xs-1"><input id="stress9" type="checkbox" class="stressCheckBox" data-value="9"></input></div>
+												<div class="col-xs-1"><input id="stress10" type="checkbox" class="stressCheckBox" data-value="10"></input></div>
+												<div class="col-xs-1"><input id="stress11" type="checkbox" class="stressCheckBox" data-value="11"></input></div>
+												<div class="col-xs-1"><input id="stress12" type="checkbox" class="stressCheckBox" data-value="12"></input></div>
+												<div class="col-xs-1"><input id="stress13" type="checkbox" class="stressCheckBox" data-value="13"></input></div>
+												<div class="col-xs-1"><input id="stress14" type="checkbox" class="stressCheckBox" data-value="14"></input></div>
+												<div class="col-xs-1"><input id="stress15" type="checkbox" class="stressCheckBox" data-value="15"></input></div>
+												<div class="col-xs-1"><input id="stress16" type="checkbox" class="stressCheckBox" data-value="16"></input></div>
+												<div class="col-xs-1"><input id="stress17" type="checkbox" class="stressCheckBox" data-value="17"></input></div>
+												<div class="col-xs-1"><input id="stress18" type="checkbox" class="stressCheckBox" data-value="18"></input></div>
+												<div class="col-xs-1"><input id="stress19" type="checkbox" class="stressCheckBox" data-value="19"></input></div>
+												<div class="col-xs-1"><input id="stress20" type="checkbox" class="stressCheckBox" data-value="20"></input></div>
+												<div class="col-xs-1"><input id="stress21" type="checkbox" class="stressCheckBox" data-value="21"></input></div>
+												<div class="col-xs-1"><input id="stress22" type="checkbox" class="stressCheckBox" data-value="22"></input></div>
+												<div class="col-xs-1"><input id="stress23" type="checkbox" class="stressCheckBox" data-value="23"></input></div>
+												<div class="col-xs-1"><input id="stress24" type="checkbox" class="stressCheckBox" data-value="24"></input></div>
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Injuries
+												</div>
+											</div>
+										</div>
+										<div class="injuryDiv">
+											<input id="injury1" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="injuryDiv">
+											<input id="injury2" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="injuryDiv">
+											<input id="injury3" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="injuryDiv">
+											<input id="injury4" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="col-xs-12">
+											<div class="sectionHeader">
+												<div class="sectionLabel">
+													Other Equipment
+												</div>
+											</div>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment1" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment2" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment3" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment4" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment5" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment6" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment7" type="text" class="formTextInput" ></input>
+										</div>
+										<div class="equipmentDiv">
+											<input id="equipment8" type="text" class="formTextInput" ></input>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
